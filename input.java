@@ -86,7 +86,7 @@ public class input{
         System.out.println("Nama Saya : "+nama1); 
         System.out.println("Mahasiswa Aktif: "+mahasiswa_aktif);
 
-        //mengoutput langsung sebuah perhitungan
+        //menampilkan langsung hasil sebuah perhitungan
         System.out.println(10%3+5);
         System.out.println(Math.pow(4,2));
 
