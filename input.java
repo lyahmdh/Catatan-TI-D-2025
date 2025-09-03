@@ -13,6 +13,13 @@ public class input{
         //[tipe data][nama] = [inisialisasi value];
         String nama1 = "Salsa";
        
+        //atau
+        //[tipe data] [nama var 1], [nama var 2], dst ;
+        //deklarasi variabel tanpa inisialisasi variabel
+        String nama2;
+        //[nama variabel] = [inisialisasi value];
+        nama2 = "Salsa"; 
+
         //proses
         //operasi aritmatika
         // + pertambahan
@@ -48,7 +55,6 @@ public class input{
         //Memasukkan data ke variable secara manual dari kode
         int nilai = 90;
         float rerata = 98.78f;
-        // float rerata = 98.78;        
         boolean mahasiswa_aktif = true;
 
         //Menggunakan data yang dimasukkan oleh user melalui terminal
@@ -68,41 +74,63 @@ public class input{
         //output
 
         //print tanpa baris baru
-        // System.out.print("Hello, World!"); 
+        System.out.print("Hello, World!"); 
 
         //print dengan baris baru di akhir (se akan-akan menekan enter pada akhir kalimat)
-        // System.out.println("Hello, World!"); 
+        System.out.println("Hello, World!"); 
 
         //menggabungkan String
-        // System.out.println("Praktikum "+"Pemdas");
+        System.out.println("Praktikum "+"Pemdas");
 
         //menggabungkan String dengan variable
-        // System.out.println("Nama Saya : "+nama1); 
-        // System.out.println("Mahasiswa Aktif: "+mahasiswa_aktif);
+        System.out.println("Nama Saya : "+nama1); 
+        System.out.println("Mahasiswa Aktif: "+mahasiswa_aktif);
 
         //mengoutput langsung sebuah perhitungan
-        // System.out.println(10%3+5);
-        // System.out.println(Math.pow(4,2));
+        System.out.println(10%3+5);
+        System.out.println(Math.pow(4,2));
 
         //printf : digunakan untuk memberi format pada output
         //%s = string
         //%d = angka bulat
         //%f = angka desimal
 
-        // System.out.printf("Nama saya adalah %s\n", nama1);
-        // System.out.printf("Nilai saya adalah %d\n", nilai);
-        // System.out.printf("Rata-rata saya adalah %.2f\n", rerata);
-        // System.out.printf("Nama saya adalah %s, nilai saya %d, dan rata-rata saya %.2f\n", nama1, nilai, rerata);
+        System.out.printf("Nama saya adalah %s\n", nama1);
+        System.out.printf("Nilai saya adalah %d\n", nilai);
+        System.out.printf("Rata-rata saya adalah %.2f\n", rerata);
+        System.out.printf("Nama saya adalah %s, nilai saya %d, dan rata-rata saya %.2f\n", nama1, nilai, rerata);
 
         //printf lanjut (ANGKA)
 
         //%.[jumlah angka di belakang koma]f  
         // --> membulatkan angka berkoma ke jumlah angka setelah desimal (bagaimana kalau lebih?)
+        System.out.printf("\n%.2f", 80000f);
 
         //%,[jumlah angka terpisah]d 
         // --> memisahkan angka bulat dengan koma berdasarkan jumlah angka yang ditentukan
+        System.out.printf("\n%,.2f", 80000f);
 
         //%0[jumlah angka yang ditampilkan]f/d 
         // --> mengisi sisa angka yang tidak ditampilkan di depan dengan angka 0
+        System.out.printf("\n%010.0f", 01003f);
+
+        //printf lanjut (String)
+        //%[jumlah karakter]s
+        // --> rata kanan
+        System.out.printf("\n%30s", "Ini rata kanan");
+
+        //%-[jumlah angka yang ditampilkan]s
+        // --> rata kiri
+        System.out.printf("\n%-30s", "Ini rata kiri");
+
+        //%-[jumlah kolom].[jumlah karakter]s
+        System.out.printf("\nNilai saya adalah %-5.3s ini", "2452527777");
+        System.out.printf("\nNilai saya adalah %10.3s", "2452527777");
+
+        //proses
+        //System.out.println(10%3+5); --> bisa langsung dengan output atau
+
+        //[tipe data][nama] = [proses yang dilakukan]
+        int hasil = 10%3+5;
     }
 }
