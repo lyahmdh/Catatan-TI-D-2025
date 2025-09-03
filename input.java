@@ -48,6 +48,7 @@ public class input{
         //Memasukkan data ke variable secara manual dari kode
         int nilai = 90;
         float rerata = 98.78f;
+        // float rerata = 98.78;        
         boolean mahasiswa_aktif = true;
 
         //Menggunakan data yang dimasukkan oleh user melalui terminal
@@ -67,31 +68,31 @@ public class input{
         //output
 
         //print tanpa baris baru
-        System.out.print("Hello, World!"); 
+        // System.out.print("Hello, World!"); 
 
         //print dengan baris baru di akhir (se akan-akan menekan enter pada akhir kalimat)
-        System.out.println("Hello, World!"); 
+        // System.out.println("Hello, World!"); 
 
         //menggabungkan String
-        System.out.println("Praktikum "+"Pemdas");
+        // System.out.println("Praktikum "+"Pemdas");
 
         //menggabungkan String dengan variable
-        System.out.println("Nama Saya : "+nama1); 
-        System.out.println("Mahasiswa Aktif: "+mahasiswa_aktif);
+        // System.out.println("Nama Saya : "+nama1); 
+        // System.out.println("Mahasiswa Aktif: "+mahasiswa_aktif);
 
         //mengoutput langsung sebuah perhitungan
-        System.out.println(10%3+5);
-        System.out.println(Math.pow(4,2));
+        // System.out.println(10%3+5);
+        // System.out.println(Math.pow(4,2));
 
         //printf : digunakan untuk memberi format pada output
         //%s = string
         //%d = angka bulat
         //%f = angka desimal
 
-        System.out.printf("Nama saya adalah %s\n", nama1);
-        System.out.printf("Nilai saya adalah %d\n", nilai);
-        System.out.printf("Rata-rata saya adalah %.2f\n", rerata);
-        System.out.printf("Nama saya adalah %s, nilai saya %d, dan rata-rata saya %.2f\n", nama1, nilai, rerata);
+        // System.out.printf("Nama saya adalah %s\n", nama1);
+        // System.out.printf("Nilai saya adalah %d\n", nilai);
+        // System.out.printf("Rata-rata saya adalah %.2f\n", rerata);
+        // System.out.printf("Nama saya adalah %s, nilai saya %d, dan rata-rata saya %.2f\n", nama1, nilai, rerata);
 
         //printf lanjut (ANGKA)
 
