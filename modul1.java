@@ -90,6 +90,9 @@ public class modul1{
         System.out.println(10%3+5);
         System.out.println(Math.pow(4,2));
 
+        //[tipe data][nama] = [proses yang dilakukan]
+        int hasil = 10%3+5;
+
         //printf : digunakan untuk memberi format pada output
         //%s = string
         //%d = angka bulat
@@ -127,10 +130,5 @@ public class modul1{
         System.out.printf("\nNilai saya adalah %-5.3s ini", "2452527777");
         System.out.printf("\nNilai saya adalah %10.3s", "2452527777");
 
-        //proses
-        //System.out.println(10%3+5); --> bisa langsung dengan output atau
-
-        //[tipe data][nama] = [proses yang dilakukan]
-        int hasil = 10%3+5;
     }
 }
