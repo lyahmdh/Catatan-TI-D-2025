@@ -27,8 +27,7 @@ public class modul1{
         // / pembagian
         // * perkalian
         // % modulo (sisa pembagian)
-
-
+     
         //Math.pow(a, b) a pangkat b
         //Math.sqrt() akar 2
         //Math.cbrt() akar 3
@@ -42,7 +41,7 @@ public class modul1{
         //[rumus]() = kurung setelah method yang mengolah data di dalam kurung sesuai kode di method, disebut dengan parameter.
 
         //contoh: Math.pow(a, b)    
-        //Math --> kelas    
+        //Math --> kelas
         //.pow --> method untuk mencari hasil pangkat    
         //(a, b) --> parameter.   a--> angka yang ingin dipangkat,   b--> nilai pangkat
 
