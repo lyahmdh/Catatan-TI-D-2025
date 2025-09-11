@@ -20,7 +20,7 @@ public class modul2 {
         // <  --> kurang dari
         // >= --> lebih dari sama dengan
         // <= --> kurang dari sama dengan
-        // !  --> NOT, mengembalikan nilai boolean
+        // !  --> NOT, mengembalikan nilai boolean ![var]
 
         boolean kitaMahasiswa = false;
         System.out.println("Apakah kita mahasiswa?" + (!kitaMahasiswa));
@@ -165,7 +165,7 @@ public class modul2 {
 
         // increment decrement
         int hey = 0;
-        if (hey++ == 1) {
+        if (hey++ == 1) { //++hey
             System.out.println("ya nambah 1 weh");
         } else {
             System.out.println("0 lah kocak");
