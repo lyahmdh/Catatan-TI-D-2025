@@ -6,6 +6,7 @@ public class modul4 {
         
         // ===== Deklarasi & Instansiasi Array =====
         int[] a = new int[5];            // array int berisi 5 elemen (default 0)
+        // int a[] = new int[5];
         String[] nama = new String[3];   // array String berisi 3 elemen (default null)
         
         // ===== Inisialisasi Array =====
@@ -23,10 +24,18 @@ public class modul4 {
         }
         
         // ===== Operasi Dasar (Jumlahkan Isi Array) =====
+        // loop for each
         int jumlah = 0;
         for (int nilai : b) jumlah += nilai;
         System.out.println("\nJumlah semua elemen array b = " + jumlah);
-        
+        // loop for
+        int jumlah2 = 0;
+        for (int i = 0; i < b.length; i++) {
+            jumlah += b[i];
+        }
+        System.out.println("\nJumlah semua elemen array b = " + jumlah2);
+
+
         // ===== Array Multidimensi (2D) =====
         int[][] matriks = {
             {1, 2, 3},
@@ -53,10 +62,6 @@ public class modul4 {
         for (int i = 0; i < jagged.length; i++) {
             System.out.println(Arrays.toString(jagged[i]));
         }
-
-        // ==================================================
-        // MATERI TAMBAHAN (di luar PPT)
-        // ==================================================
 
         // ===== Default Value Elemen Array =====
         System.out.println("\nDefault value int[0] = " + new int[1][0]);
@@ -91,13 +96,6 @@ public class modul4 {
         kubus[0][1][1] = 10;
         System.out.println("\nNilai kubus[0][1][1] = " + kubus[0][1][1]);
 
-        // ===== Array sebagai Parameter & Return Value =====
-        int[] arr4 = {1, 2, 3, 4, 5};
-        System.out.println("Jumlah elemen arr4 = " + jumlahkan(arr4));
-
-        int[] hasil = buatArray();
-        System.out.println("Array dari method: " + Arrays.toString(hasil));
-
         // ===== Perbandingan Array vs ArrayList =====
         String[] namaArray = {"Ani", "Budi", "Citra"};
         ArrayList<String> namaList = new ArrayList<>();
@@ -108,17 +106,5 @@ public class modul4 {
 
         System.out.println("\nArray biasa: " + Arrays.toString(namaArray));
         System.out.println("ArrayList: " + namaList);
-    }
-
-    // Method dengan parameter array
-    public static int jumlahkan(int[] arr) {
-        int sum = 0;
-        for (int n : arr) sum += n;
-        return sum;
-    }
-
-    // Method return array
-    public static int[] buatArray() {
-        return new int[]{10, 20, 30};
     }
 }
