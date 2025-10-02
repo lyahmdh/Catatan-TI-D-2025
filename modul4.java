@@ -95,16 +95,5 @@ public class modul4 {
         int[][][] kubus = new int[2][2][2];
         kubus[0][1][1] = 10;
         System.out.println("\nNilai kubus[0][1][1] = " + kubus[0][1][1]);
-
-        // ===== Perbandingan Array vs ArrayList =====
-        String[] namaArray = {"Ani", "Budi", "Citra"};
-        ArrayList<String> namaList = new ArrayList<>();
-        namaList.add("Ani");
-        namaList.add("Budi");
-        namaList.add("Citra");
-        namaList.add("Dewi"); // bisa nambah terus
-
-        System.out.println("\nArray biasa: " + Arrays.toString(namaArray));
-        System.out.println("ArrayList: " + namaList);
     }
 }
