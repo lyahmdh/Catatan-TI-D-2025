@@ -1,5 +1,4 @@
 import java.util.Arrays;
-import java.util.ArrayList;
 
 public class modul4 {
     public static void main(String[] args) {
@@ -39,8 +38,10 @@ public class modul4 {
         // ===== Array Multidimensi (2D) =====
         int[][] matriks = {
             {1, 2, 3},
-            {4, 5, 6}
+            {4, 5, 6},
+            {1, 2}
         };
+
         System.out.println("\nIsi array 2D (matriks):");
         for (int i = 0; i < matriks.length; i++) {
             for (int j = 0; j < matriks[i].length; j++) {
@@ -95,5 +96,11 @@ public class modul4 {
         int[][][] kubus = new int[2][2][2];
         kubus[0][1][1] = 10;
         System.out.println("\nNilai kubus[0][1][1] = " + kubus[0][1][1]);
+
+        int[][][] kubus1 = {
+            {{1, 2, 3}, {4, 5, 6}}, {{1, 2, 3}, {1, 2, 3}}
+        };
+
+        int[]
     }
 }
