@@ -2,12 +2,9 @@ import java.util.Scanner;
 
 public class contoh {
     public static void main(String[] args) {
-        int[] b = {1, 2, -4, 8, 9};
-
-        int jumlah2 = 0;
-        for (int i = 0; i < b.length; i++) {
-            jumlah2 += b[i];
-        }
-        System.out.println("\nJumlah semua elemen array b = " + jumlah2);
+ int[] arr1 = {1, 2, 3};
+        int[] arr2 = arr1; // shallow copy (referensi sama)
+        arr2[0] = 99;
+        System.out.println("\nSetelah ubah arr2[0]=99, arr1[0] = " + arr1[0]);
     }
 }
