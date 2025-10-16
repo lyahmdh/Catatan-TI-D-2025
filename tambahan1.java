@@ -25,7 +25,7 @@ public class tambahan1 {
 
 
         // 3. equals(Object anObject) & equalsIgnoreCase(String anotherString)
-        // ============================================================
+        // ===================================================================
         // Deskripsi:
         // - equals() → membandingkan isi string secara case-sensitive
         // - equalsIgnoreCase() → membandingkan isi string tanpa memperhatikan besar kecil huruf
