@@ -1,5 +1,7 @@
 public class tambahan1 {
     public static void main(String[] args) {
+        // https://www.w3schools.com/java/java_ref_string.asp
+
 
         // 1. charAt(int index)
         // ============================================================
