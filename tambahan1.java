@@ -130,7 +130,7 @@ public class tambahan1 {
         // - toLowerCase() → ubah semua huruf jadi kecil
         // - split("@") → pisahkan username dan domain
         // - equals() → cek apakah domain == "example.com"
-        String email = "  Alice@Example.COM  ";
+        String email = "  Alice@Example.COM  "; //@gmail.com @studeNt.Ub.aC.id@....
         email = email.trim().toLowerCase();
         String[] emailParts = email.split("@");
         if (emailParts.length == 2) {
