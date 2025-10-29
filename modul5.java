@@ -1,4 +1,4 @@
-public class belajarMethod {
+public class modul5 {
 
     //ini namanya main method yaa   v
     public static void main(String[] args) {
