@@ -45,11 +45,12 @@ public class modul5 {
     }
 
     public static void testStatic(String test1) {
+        System.out.println(test1);
         //kode di sini akan dijalankan kalo panggil testStatic("haloo"); di main method
     }
 
 
-    //yang optional yang mana aja?
+    // yang optional yang mana aja?
     // bagian modifier, sama parameter-parameter itu TIDAK WAJIB yaa
 
 
