@@ -1,39 +1,40 @@
-// ===============================================================
-//  Modul Praktikum Pemrograman Dasar 2025
-//  BAB 6: CLASS DAN OBJECT
-//  File: Mahasiswa.java
-// ===============================================================
-
 public class Mahasiswa {
 
-    // ===========================================================
-    // 🔹 Variabel Global (Instance Variables)
-    // ===========================================================
+    // Variabel Global (Instance Variables)
     private String nama;
     private String nim;
     private double ipk;
 
-    // ===========================================================
-    // 🔹 Variabel Global Static (Class Variable)
-    // Bersifat milik class, dibagikan ke semua objek.
-    // ===========================================================
+    // Variabel Global Static (milik class)
     private static String universitas = "Universitas Brawijaya";
 
-    // ===========================================================
-    // 🔹 Constructor (Method khusus untuk inisialisasi objek)
-    // ===========================================================
+    // Constructor 1 (Default / Tanpa Parameter)
+    // Digunakan kalau kita belum punya data apapun.
+    public Mahasiswa() {
+        this.nama = "Tidak diketahui";
+        this.nim = "000000000";
+        this.ipk = 0.0;
+    }
+
+    // Constructor 2 (Hanya Nama dan NIM)
+    // Cocok untuk input data awal tanpa IPK.
+    public Mahasiswa(String nama, String nim) {
+        this.nama = nama;
+        this.nim = nim;
+        this.ipk = 0.0; // IPK default
+    }
+
+    // Constructor 3 (Lengkap: Nama, NIM, IPK)
+    // Inilah versi penuh constructor.
     public Mahasiswa(String nama, String nim, double ipk) {
         this.nama = nama;
         this.nim = nim;
         this.ipk = ipk;
     }
 
-    // ===========================================================
-    // 🔹 Non-static Method
-    // Hanya bisa dipanggil melalui objek (instance).
-    // ===========================================================
+    // Non-static Method untuk Menampilkan Data
     public void tampilData() {
-        // Variabel lokal (hanya hidup di dalam method ini)
+        // Variabel lokal
         String status;
         if (ipk >= 3.5) {
             status = "Cumlaude";
@@ -41,7 +42,6 @@ public class Mahasiswa {
             status = "Reguler";
         }
 
-        // Menampilkan data mahasiswa
         System.out.println("Nama        : " + nama);
         System.out.println("NIM         : " + nim);
         System.out.println("IPK         : " + ipk);
@@ -50,17 +50,21 @@ public class Mahasiswa {
         System.out.println("--------------------------------");
     }
 
-    // ===========================================================
-    // 🔹 Getter dan Setter
-    // Contoh penerapan ENKAPSULASI (Encapsulation)
-    // Atribut dibuat private, diakses lewat method public.
-    // ===========================================================
+    // Getter dan Setter (Encapsulation)
     public String getNama() {
         return nama;
     }
 
     public void setNama(String nama) {
         this.nama = nama;
+    }
+
+    public String getNim() {
+        return nim;
+    }
+
+    public void setNim(String nim) {
+        this.nim = nim;
     }
 
     public double getIpk() {
@@ -71,29 +75,16 @@ public class Mahasiswa {
         if (ipkBaru >= 0.0 && ipkBaru <= 4.0) {
             this.ipk = ipkBaru;
         } else {
-            System.out.println("IPK tidak valid!");
+            System.out.println("⚠️ IPK tidak valid!");
         }
     }
 
-    // ===========================================================
-    // 🔹 Static Method
-    // Bisa dipanggil langsung lewat nama class tanpa membuat objek.
-    // ===========================================================
+    // Static Method (Bisa dipanggil tanpa objek)
     public static void infoKampus() {
         System.out.println("Selamat datang di " + universitas + "!");
     }
 
-    // Method static lain untuk mengubah nama universitas
     public static void ubahUniversitas(String namaBaru) {
         universitas = namaBaru;
-    }
-
-    // ===========================================================
-    // 🔹 Contoh Perbandingan Static dan Non-Static
-    // Non-static method dapat mengakses semua atribut instance.
-    // Static method hanya dapat mengakses variabel static.
-    // ===========================================================
-    public void ubahNama(String namaBaru) {
-        this.nama = namaBaru;
     }
 }

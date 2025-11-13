@@ -1,92 +1,69 @@
-// ===============================================================
-//  Modul Praktikum Pemrograman Dasar 2025
-//  BAB 6: CLASS DAN OBJECT
-//  File: MainClass.java
-// ===============================================================
-
 public class MainClass {
     public static void main(String[] args) {
         System.out.println("===== PRAKTIKUM BAB 6: CLASS DAN OBJECT =====\n");
 
-        // =======================================================
-        // 1️⃣ Memanggil Static Method (tanpa objek)
-        // =======================================================
+        // Static Method
         Mahasiswa.infoKampus();
 
-        // =======================================================
-        // 2️⃣ Membuat Objek (Instance)
-        // =======================================================
-        Mahasiswa m1 = new Mahasiswa("Alya", "245150707111013", 3.85);
-        Mahasiswa m2 = new Mahasiswa("Dira", "245150707111020", 3.20);
-        Mahasiswa m3 = new Mahasiswa("Rafi", "245150707111030", 3.90);
+        // Contoh Penggunaan Berbagai Constructor
+        System.out.println("\n=== DEMO CONSTRUCTOR OVERLOADING ===");
 
-        // =======================================================
-        // 3️⃣ Menampilkan Data (Non-static Method)
-        // =======================================================
-        System.out.println("\n=== DATA MAHASISWA ===");
+        // Constructor 1 (tanpa parameter)
+        Mahasiswa m1 = new Mahasiswa();
+
+        // Constructor 2 (hanya nama dan nim)
+        Mahasiswa m2 = new Mahasiswa("Alya", "245150707111013");
+
+        // Constructor 3 (lengkap)
+        Mahasiswa m3 = new Mahasiswa("Dira", "245150707111020", 3.85);
+
+        // Menampilkan hasil
         m1.tampilData();
         m2.tampilData();
         m3.tampilData();
 
-        // =======================================================
-        // 4️⃣ Menggunakan Setter untuk Mengubah Atribut Private
-        // =======================================================
-        m1.setNama("Alya Maharani");
-        m1.setIpk(3.95);
+        // Mengubah data menggunakan Setter (Encapsulation)
+        m2.setIpk(3.70);
+        m2.setNama("Alya Maharani");
 
-        System.out.println("Setelah data Alya diubah:");
-        System.out.println("Nama baru: " + m1.getNama());
-        System.out.println("IPK baru : " + m1.getIpk());
-        System.out.println("--------------------------------");
+        System.out.println("Setelah diubah melalui Setter:");
+        m2.tampilData();
 
-        // =======================================================
-        // 5️⃣ Perbedaan Variabel Primitif dan Referensi
-        // =======================================================
+        // Variabel Primitif vs Referensi
         int a = 10;
-        int b = a; // nilai disalin
+        int b = a;
         b = 20;
-        System.out.println("\nNilai a = " + a + " (tidak berubah)");
-        System.out.println("Nilai b = " + b + " (berubah sendiri)");
+        System.out.println("Nilai a: " + a + " | Nilai b: " + b);
 
-        // Variabel referensi menunjuk ke objek yang sama
-        Mahasiswa ref1 = new Mahasiswa("Bima", "245150707111040", 3.5);
-        Mahasiswa ref2 = ref1; // menunjuk ke objek yang sama
-        ref2.ubahNama("Rani");
-        System.out.println("Nama di ref1 setelah diubah ref2: " + ref1.getNama());
-        System.out.println("--------------------------------");
+        Mahasiswa ref1 = new Mahasiswa("Bima", "245150707111030", 3.6);
+        Mahasiswa ref2 = ref1;
+        ref2.setNama("Rani");
+        System.out.println("Nama ref1 setelah diubah ref2: " + ref1.getNama());
 
-        // =======================================================
-        // 6️⃣ Array of Objects
-        // =======================================================
+        // Array of Objects
         Mahasiswa[] daftarMhs = {
-            new Mahasiswa("Sinta", "245150707111050", 3.60),
-            new Mahasiswa("Gilang", "245150707111060", 3.75),
-            new Mahasiswa("Rafi", "245150707111070", 3.90)
+            new Mahasiswa("Sinta", "245150707111040", 3.6),
+            new Mahasiswa("Gilang", "245150707111050", 3.9),
+            new Mahasiswa("Rafi", "245150707111060", 3.8)
         };
 
         System.out.println("\n=== ARRAY OF OBJECTS ===");
-        for (int i = 0; i < daftarMhs.length; i++) {
-            System.out.println("Mahasiswa ke-" + (i + 1));
-            daftarMhs[i].tampilData();
+        for (Mahasiswa m : daftarMhs) {
+            m.tampilData();
         }
 
-        // =======================================================
-        // 7️⃣ Static Variable (berlaku untuk semua objek)
-        // =======================================================
+        // Static Variable Demonstration
         System.out.println("Universitas sebelum diubah:");
         m1.tampilData();
 
-        // Mengubah variabel static melalui method static
         Mahasiswa.ubahUniversitas("Universitas Indonesia");
 
         System.out.println("Setelah universitas diubah:");
         m1.tampilData();
         m2.tampilData();
 
-        // =======================================================
-        // 8️⃣ Variabel Lokal di Main()
-        // =======================================================
-        int tahunSekarang = 2025; // hanya hidup di dalam main()
+        // Variabel Lokal
+        int tahunSekarang = 2025; // hanya hidup di dalam main
         System.out.println("Tahun sekarang: " + tahunSekarang);
 
         System.out.println("\n===== SELESAI =====");
