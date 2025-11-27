@@ -1,7 +1,7 @@
 public class Mahasiswa {
 
     // Variabel Global (Instance Variables)
-    private String nama;
+    static String nama;
     private String nim;
     private double ipk;
 

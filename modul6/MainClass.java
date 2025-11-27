@@ -31,8 +31,8 @@ public class MainClass {
 
         // Variabel Primitif vs Referensi
         int a = 10;
-        int b = a;
-        b = 20;
+        int b = a; //10
+        b = 20; //Apa a ikut berubah?
         System.out.println("Nilai a: " + a + " | Nilai b: " + b);
 
         Mahasiswa ref1 = new Mahasiswa("Bima", "245150707111030", 3.6);
