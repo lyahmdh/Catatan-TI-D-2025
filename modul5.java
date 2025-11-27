@@ -83,7 +83,7 @@ public class modul5 {
 
     // argument dengan 2 parameter
     static void tampilkanHello(String nama, int umur) {
-        System.out.println("Halo, " + nama + "! Aku temannya" + teman);
+        System.out.println("Halo, " + nama + "! Aku berumur" + umur);
     }
     //cara panggil: tampilkanHello("Tom", "Jerry");
 
@@ -106,10 +106,10 @@ public class modul5 {
     }
 
     // return berisi nilai kembali dari variabel yang ada di dalam method
-    static double luasLingkaran(float jariJari) {
-        double luasLingkaran1 = Math.pow(jariJari, 2)*3.14;
-        return luasLingkaran1;
-    }
+    // static double luasLingkaran(float jariJari) {
+    //     double luasLingkaran1 = Math.pow(jariJari, 2)*3.14;
+    //     return luasLingkaran1;
+    // }
 
     //suatu method boleh pake method lain di dalamnya~
     static double volTabung(float jariJari, float tinggi) {
